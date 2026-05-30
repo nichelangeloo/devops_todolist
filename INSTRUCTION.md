@@ -33,7 +33,13 @@ Key configuration:
 docker build -t todoapp:1.0.0 .
 
 # Or override the Python version explicitly
-docker build --build-arg PYTHON_VERSION=3.12-slim -t todoapp:1.0.0 .
+docker build --build-arg PYTHON_VERSION=3.11-slim -t todoapp:1.0.0 .
+
+# Tag the image for Docker Hub
+docker tag todoapp:1.0.0 <username>/todoapp:1.0.0
+
+# Push the image to Docker Hub
+docker push <username>/todoapp:1.0.0
 ```
 
 ---
